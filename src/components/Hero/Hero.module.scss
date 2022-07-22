@@ -1,0 +1,20 @@
+section{
+  background: lightslategrey;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper{
+  align-items: center;
+  justify-content: space-around;
+}
+
+.textWrapper{
+  height: fit-content;
+}
+
+.imageWrapper{
+  height: 500px;
+  width: 300px;
+}
