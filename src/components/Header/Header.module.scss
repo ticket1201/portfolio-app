@@ -1,0 +1,30 @@
+header {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: pink;
+}
+
+.wrapper {
+  align-content: center;
+  justify-content: end;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &Item {
+    text-decoration: none;
+    font-size: 1.25rem;
+    margin: 0 50px;
+    color: black;
+
+    & a:visited {
+      color: black;
+    }
+  }
+}
+
