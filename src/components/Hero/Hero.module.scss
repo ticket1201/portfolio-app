@@ -1,20 +1,77 @@
-section{
-  background: lightslategrey;
-  height: 800px;
+.hero {
+  height: 100vh;
+  min-height: 680px;
   display: flex;
   justify-content: center;
+  background-image: url('./../../assets/images/heroback.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
 }
 
-.wrapper{
+.wrapper {
   align-items: center;
   justify-content: space-around;
+
+  .textWrapper {
+
+    & span {
+      display: block;
+      line-height: 4.75rem;
+      font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    & .titleItalic {
+      font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-style: italic;
+    }
+  }
+
+  .imageWrapper {
+    height: 500px;
+    width: 300px;
+    background: lightslategrey;
+  }
+
+  @media screen {
+    @media (max-width: 992px) {
+      & .textWrapper {
+        & span {
+          line-height: 3.125rem;
+        }
+      }
+
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      gap: 15px;
+      padding: 40px 10px;
+      & .imageWrapper {
+        height: 400px;
+        width: 250px;
+      }
+      & .textWrapper {
+        & h1{
+          margin: 0;
+        }
+        & span {
+          line-height: 3rem;
+        }
+      }
+    }
+    @media (max-width: 480px) {
+      gap: 5px;
+      & .imageWrapper {
+        height: 350px;
+        width: 200px;
+      }
+    }
+  }
 }
 
-.textWrapper{
-  height: fit-content;
-}
-
-.imageWrapper{
-  height: 500px;
-  width: 300px;
-}
