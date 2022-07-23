@@ -1,14 +1,24 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
+import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects';
+import Contacts from './components/Contacts/Contacts';
+import Footer from './components/Footer/Footer';
+//import ToTop from './components/ToTop/ToTop';
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
         <Header/>
         <Hero/>
-    </div>
+        <Skills/>
+        <Projects/>
+        <Contacts/>
+        <Footer/>
+       {/* <ToTop/>*/}
+    </main>
   );
 }
 
