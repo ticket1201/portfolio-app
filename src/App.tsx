@@ -6,7 +6,7 @@ import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import Contacts from './components/Contacts/Contacts';
 import Footer from './components/Footer/Footer';
-//import ToTop from './components/ToTop/ToTop';
+import ToTop from './components/ToTop/ToTop';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Projects/>
         <Contacts/>
         <Footer/>
-       {/* <ToTop/>*/}
+        <ToTop/>
     </main>
   );
 }
