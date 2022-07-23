@@ -1,0 +1,28 @@
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #18191a;
+  color: white;
+}
+
+.wrapper {
+  padding: 20px 10px 10px;
+  flex-direction: column;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+@media screen and (max-width: 480px) {
+  .socials {
+    gap: 25px;
+  }
+}
+.socials a {
+  color: white;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=Footer.module.css.map */
