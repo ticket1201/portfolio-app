@@ -6,11 +6,14 @@ const Header = () => {
         <header>
             <div className={`wrapper ${s.wrapper}`}>
                 <nav className={s.nav}>
-                    <a href="" className={s.navItem}>Main</a>
-                    <a href="" className={s.navItem}>Skills</a>
-                    <a href="" className={s.navItem}>Projects</a>
-                    <a href="" className={s.navItem}>Contacts</a>
+                    <a href={"#main"} className={s.navItem}>Main</a>
+                    <a href={'#skills'} className={s.navItem}>Skills</a>
+                    <a href={'#projects'} className={s.navItem}>Projects</a>
+                    <a href={'#contacts'} className={s.navItem}>Contacts</a>
                 </nav>
+                <div className={s.burger}>
+                    icon
+                </div>
             </div>
         </header>
     );
