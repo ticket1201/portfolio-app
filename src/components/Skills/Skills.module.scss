@@ -1,0 +1,60 @@
+.skills {
+  background: rgba(248, 249, 250, 1);
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 50px 0 80px;
+}
+
+.cardContainer {
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen {
+    @media (max-width: 992px) {
+      gap: 35px;
+      justify-content: center;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.skillCard {
+  width: 310px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 45px 15px 55px;
+  border-radius: 15px;
+  box-shadow: 6px 6px 8px -5px rgba(34, 60, 80, 0.6);
+
+  & h3 {
+    margin: 25px 0 10px;
+  }
+
+  & p {
+    margin: 5px 0 15px;
+  }
+
+  & img {
+    height: 100px;
+    width: 100px;
+  }
+
+  & .CardDescription {
+    font-size: 1.25rem;
+    color: #6c757d;
+
+  }
+}
