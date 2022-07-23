@@ -6,13 +6,13 @@ const Header = () => {
         <header>
             <div className={`wrapper ${s.wrapper}`}>
                 <nav className={s.nav}>
-                    <a href={"#main"} className={s.navItem}>Main</a>
+                    <a href={'#main'} className={s.navItem}>Main</a>
                     <a href={'#skills'} className={s.navItem}>Skills</a>
                     <a href={'#projects'} className={s.navItem}>Projects</a>
                     <a href={'#contacts'} className={s.navItem}>Contacts</a>
                 </nav>
                 <div className={s.burger}>
-                    icon
+                    <i className="fa-solid fa-align-justify"></i>
                 </div>
             </div>
         </header>
