@@ -9,6 +9,11 @@ header {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
   z-index: 10;
 }
+@media screen and (max-width: 480px) {
+  header {
+    position: fixed;
+  }
+}
 
 .wrapper {
   align-content: center;
