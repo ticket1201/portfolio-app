@@ -8,8 +8,8 @@ const Projects = () => {
             <div className={`wrapper ${s.projectsWrapper}`} id={`projects`}>
                 <h2 className={s.projectTitle}>Projects</h2>
                 <div className={s.projectItemWrapper}>
-                    <ProjectCard/>
-                    <ProjectCard/>
+                    <ProjectCard projectName={'TodoList'} projectUrl={''} projectDescription={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'}/>
+                    <ProjectCard projectName={'Social Network'} projectUrl={''} projectDescription={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'}/>
                 </div>
             </div>
         </article>
