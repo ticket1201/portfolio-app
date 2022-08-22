@@ -29,14 +29,14 @@
 }
 
 .skillCard {
-  width: 340px;
+  width: 335px;
   box-sizing: border-box;
   background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   padding: 45px 25px 55px;
   border-radius: 15px;
   box-shadow: 6px 6px 8px -5px rgba(34, 60, 80, 0.6);
@@ -54,9 +54,9 @@
     margin: 5px 0 15px;
   }
 
-  & img {
-    height: 100px;
-    width: 100px;
+  & svg {
+    height: 80px;
+    width: 80px;
   }
 
   & .CardDescription {
