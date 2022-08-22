@@ -31,9 +31,13 @@
   }
 
   .imageWrapper {
-    height: 500px;
-    width: 300px;
     background: lightslategrey;
+    height: 500px;
+    & img{
+      height: 500px;
+      width: auto;
+      filter: brightness(83%) contrast(123%)
+    }
   }
 
   @media screen {
