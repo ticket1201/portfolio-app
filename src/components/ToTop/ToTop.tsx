@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import {faAngleUp} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 
 const ToTop = () => {
@@ -32,7 +34,7 @@ const ToTop = () => {
 
     return (
         <div className={style} onClick={toTop}>
-            <i className="fa-solid fa-angle-up"></i>
+            <FontAwesomeIcon icon={faAngleUp}/>
         </div>
     );
 };

@@ -1,7 +1,10 @@
 import React from 'react';
 import s from './Header.module.scss'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faAlignJustify} from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
+
     return (
         <header>
             <div className={`wrapper ${s.wrapper}`}>
@@ -12,7 +15,7 @@ const Header = () => {
                     <a href={'#contacts'} className={s.navItem}>Contacts</a>
                 </nav>
                 <div className={s.burger}>
-                    <i className="fa-solid fa-align-justify"></i>
+                    <FontAwesomeIcon icon={faAlignJustify}/>
                 </div>
             </div>
         </header>
