@@ -1,37 +1,60 @@
+@import "./../../assets/styles/mixins";
+@import "./../../assets/styles/variables";
+
 .projects {
-  display: flex;
-  justify-content: center;
-  background: white;
+  min-height: 100vh;
+  @include displayFlex(row, center);
+  flex: 1 1 100%;
+  background: $lightGray;
 
   &Wrapper {
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    padding: 50px 10px 80px;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1 1 100%;
+    @media screen {
+      @media (max-width: $maxWidthBreak992) {
+        padding: 40px;
+      }
+      @media (max-width: $maxWidthBreak480) {
+        gap: 30px;
+      }
+    }
+    @media screen {
+      @media (max-width: $maxWidthBreak992) {
+        & .fade {
+            align-self: center;
+        }
+      }
+    }
+
   }
 }
 
 .projectItemWrapper {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  @include displayFlex(row, flex-start);
+  gap: 70px;
   @media screen {
-    @media (max-width: 992px) {
+    @media (max-width: $maxWidthBreak992) {
       flex-direction: column;
       align-items: center;
       gap: 55px;
+    }
+    @media (max-width: $maxWidthBreak480) {
+      gap: 40px;
     }
   }
 }
 
 .projectCard {
-  width: 450px;
-  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  max-width: 380px;
+  box-shadow: 7px 7px 10px -5px rgba(34, 60, 80, 0.45);
+  border-radius: 10px;
   cursor: pointer;
-
   @media screen {
-    @media (max-width: 480px) {
-      width: 90%;
+    @media (max-width: $maxWidthBreak480) {
+      width: 100%;
     }
   }
 
@@ -42,21 +65,33 @@
   &:hover {
     animation: shadow-drop-br 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
-    & .imageWrapper:after{
-      content:'';
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 1;
-      background: rgba(0, 0, 0, 0.6);
+
+    & .imageWrapper {
+      filter: grayscale(0);
+
+      @media screen {
+        @media (max-width: $maxWidthBreak480) {
+          height: 200px;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 10px 10px 0 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 5;
+      }
     }
 
     & .hiddenBtn {
-      animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-      display: block;
       position: relative;
+      display: block;
+      animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
       z-index: 10;
     }
 
@@ -65,24 +100,26 @@
 
 
   & .imageWrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 300px;
+    position: relative;
+    @include displayFlex(row, center);
+    align-items: center;
+    border-radius: 10px 10px 0 0;
     background-position: center;
     background-size: cover;
+    filter: grayscale(100%);
   }
 
   & .descriptionWrapper {
-    display: flex;
-    flex-direction: column;
+    @include displayFlex(column, center);
     align-items: start;
     padding: 0 30px 25px;
-    background: rgba(248, 249, 250, 1);
+    border-radius: 0 0 10px 10px;
+    background: $inputWhite;
 
     & p {
-      color: #6c757d;
+      color: $lightBlack;
+      margin: 8px 0;
     }
   }
 }

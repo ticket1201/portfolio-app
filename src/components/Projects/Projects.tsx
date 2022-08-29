@@ -3,16 +3,19 @@ import s from   './Projects.module.scss'
 import ProjectCard from './ProjectCard/ProjectCard';
 import todo from './../../assets/images/todolist.png'
 import social from './../../assets/images/socialNetwork.png'
+import {Fade} from 'react-awesome-reveal';
 
 const Projects = () => {
     return (
         <article className={s.projects}>
-            <div className={`wrapper ${s.projectsWrapper}`} id={`projects`}>
+            <div className={`wrapper ${s.projectsWrapper}`}>
                 <h2 className={s.projectTitle}>Projects</h2>
-                <div className={s.projectItemWrapper}>
-                    <ProjectCard projectName={'TodoList'} projectUrl={''} projectImage={todo} projectDescription={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'}/>
-                    <ProjectCard projectName={'Social Network'} projectImage={social} projectUrl={''} projectDescription={'Lorem ipsum dolor sit amet, consectetur adipiscing elit'}/>
-                </div>
+                <Fade className={s.fade}>
+                    <div className={s.projectItemWrapper}>
+                        <ProjectCard projectName={'TodoList'} projectUrl={'https://ticket1201.github.io/it-incubator-todolist-ts-01/'} projectImage={todo} projectDescription={'Todolist, simple way to organise everything'}/>
+                        <ProjectCard projectName={'Social Network'} projectImage={social} projectUrl={'https://ticket1201.github.io/samurai-way/'} projectDescription={'Online platform to connect people'}/>
+                    </div>
+                </Fade>
             </div>
         </article>
     );
