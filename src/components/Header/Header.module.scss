@@ -1,80 +1,92 @@
+@import "./../../assets/styles/mixins";
+@import "./../../assets/styles/variables";
+
 header {
-  position: absolute;
-  height: 80px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  height: 100vh;
+  box-sizing: border-box;
+  flex: 0 0 400px;
+  @include displayFlex(column, center);
+  padding: 0 100px;
+  background: $colorWhite;
   z-index: 10;
+
+
+  & h2{
+    font-size: 2.1rem;
+    margin: 0;
+    font-weight: 900;
+  }
+
+  & p{
+    color: $colorGray;
+  }
+
   @media screen {
-    @media (max-width: 480px) {
-      position: fixed;
+    @media (max-width: $maxWidthBreak1200) {
+      display: none;
     }
   }
 }
 
-.wrapper {
-  align-content: center;
-  justify-content: end;
+
+.active{
+  color: $colorBlack;
+  letter-spacing: 2px;
 }
 
+
 .nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @include displayFlex(column, center);
+  gap: 10px;
+  align-items: flex-start;
+  padding: 40px 0 50px;
 
   &Item {
+    @include displayFlex(row, center);
+    gap: 10px;
+    height: 30px;
     text-decoration: none;
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 0.95rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0 40px;
-    color: rgba(255, 255, 255, 0.8);
+    font-family: $montserratFont;
+    font-weight: 500;
+    transition: all .3s ease;
+    color: $colorGray;
+
+    & svg{
+      height: 15px;
+      width: 15px;
+    }
 
     &:hover {
-      color: white;
+      color: $colorBlack;
+      letter-spacing: 2px;
     }
 
     & a:visited {
-      color: black;
+      color: $colorWhite;
     }
 
   }
 }
 
-.burger {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  display: none;
-  cursor: pointer;
-  top: 15px;
-  right: 35px;
-  font-size: 2.25rem;
-  color: rgba(255, 255, 255, 0.8);
-}
 
 
 @media screen {
-  @media (max-width: 768px) {
+  @media (max-width: $maxWidthBreak768) {
     .wrapper {
       justify-content: center;
+
       & .navItem {
         margin: 0 20px;
       }
     }
   }
-  @media (max-width: 480px) {
+  @media (max-width: $maxWidthBreak480) {
     .nav {
       display: none;
     }
-    .burger{
-      display: flex;
+    .burger {
+      @include displayFlex(row, center);
       align-items: center;
-      justify-content: center;
     }
 
   }

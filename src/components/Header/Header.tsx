@@ -1,24 +1,45 @@
 import React from 'react';
 import s from './Header.module.scss'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faAlignJustify} from '@fortawesome/free-solid-svg-icons';
+import {faBriefcase, faEnvelope, faHouseChimney, faUser} from '@fortawesome/free-solid-svg-icons';
+import {NavLink} from 'react-router-dom';
+import {Fade} from 'react-awesome-reveal';
 
 const Header = () => {
+    const active = {
+        color: `black`,
+        letterSpacing: `2px`
+    }
+
+    let date = new Date()
 
     return (
-        <header>
-            <div className={`wrapper ${s.wrapper}`}>
+        <Fade>
+            <header>
+                <h2>PORTFOLIO</h2>
                 <nav className={s.nav}>
-                    <a href={'#main'} className={s.navItem}>Main</a>
-                    <a href={'#skills'} className={s.navItem}>Skills</a>
-                    <a href={'#projects'} className={s.navItem}>Projects</a>
-                    <a href={'#contacts'} className={s.navItem}>Contacts</a>
+                    <NavLink to={'/home'} className={s.navItem}
+                             style={({isActive}) =>
+                                 isActive ? active : {}}>
+                        <FontAwesomeIcon icon={faHouseChimney}/>
+                        Home
+                    </NavLink>
+                    <NavLink to={'/about'} className={s.navItem}>
+                        <FontAwesomeIcon icon={faUser}/>
+                        About
+                    </NavLink>
+                    <NavLink to={'/portfolio'} className={s.navItem}>
+                        <FontAwesomeIcon icon={faBriefcase}/>
+                        Portfolio
+                    </NavLink>
+                    <NavLink to={'/contact'} className={s.navItem}>
+                        <FontAwesomeIcon icon={faEnvelope}/>
+                        Contact
+                    </NavLink>
                 </nav>
-                <div className={s.burger}>
-                    <FontAwesomeIcon icon={faAlignJustify}/>
-                </div>
-            </div>
-        </header>
+                <p>© {date.getFullYear()}. All Rights Reserved</p>
+            </header>
+        </Fade>
     );
 };
 
