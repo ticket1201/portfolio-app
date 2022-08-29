@@ -1,0 +1,143 @@
+h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  margin: 0 0 19px 0;
+  word-wrap: break-word;
+  text-transform: uppercase;
+  color: #18191a;
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.125rem;
+  }
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 1.25rem;
+  text-align: center;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-size: 1.125rem;
+  text-align: center;
+  margin: 15px 0;
+}
+
+button {
+  font-size: 15px;
+  line-height: 15px;
+  padding: 19px 40px;
+  border: none;
+  cursor: pointer;
+  background-color: #18191a;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+button:hover {
+  letter-spacing: 2px;
+}
+
+.About {
+  min-height: 100vh;
+  flex: 1 1 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.About .popup {
+  overflow-x: scroll;
+}
+.About .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 40px;
+}
+.About .wrapper img {
+  width: 100%;
+}
+.About .wrapper h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+  margin: 48px 0 23px 0;
+}
+.About .wrapper .textWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+.About .wrapper .textWrapper .descriptionText {
+  width: 45%;
+  line-height: 30px;
+  font-style: italic;
+}
+.About .wrapper .textWrapper .descriptionText p {
+  margin-bottom: 35px;
+}
+.About .wrapper .textWrapper .aboutTextWrapper {
+  width: 45%;
+}
+.About .wrapper .textWrapper .aboutTextWrapper .aboutText {
+  display: grid;
+  grid-template-columns: 110px 2fr;
+}
+.About .wrapper .textWrapper .aboutTextWrapper .aboutTextTitle {
+  font-weight: 700;
+}
+.About .wrapper .textWrapper p {
+  color: #767676;
+}
+@media screen and (max-width: 768px) {
+  .About .wrapper {
+    gap: 30px;
+  }
+  .About .wrapper h3 {
+    font-size: 1.75rem;
+    align-self: center;
+    margin: 0;
+  }
+  .About .wrapper .textWrapper {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .About .wrapper .textWrapper .descriptionText {
+    width: 85%;
+  }
+  .About .wrapper .textWrapper .descriptionText p {
+    margin: 0 0 15px;
+  }
+  .About .wrapper .textWrapper .aboutTextWrapper {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .About .wrapper h3 {
+    font-size: 1.725rem;
+  }
+}
+
+/*# sourceMappingURL=About.module.css.map */
