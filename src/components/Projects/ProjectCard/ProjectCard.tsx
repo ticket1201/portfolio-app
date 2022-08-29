@@ -14,10 +14,14 @@ const ProjectCard = (props: ProjectPropsType) => {
         backgroundImage: `url(${props.projectImage})`
     }
 
+    const onclickHandler = () => {
+        window.open(props.projectUrl, '_blank')
+    }
+
     return (
         <div className={s.projectCard}>
             <div className={s.imageWrapper} style={backgroundImage}>
-                <button className={s.hiddenBtn}>View project</button>
+                <button className={s.hiddenBtn} onClick={onclickHandler}>View project</button>
             </div>
             <div className={s.descriptionWrapper}>
                 <h3>{props.projectName}</h3>
