@@ -17,7 +17,7 @@ const Hero = () => {
                         <h1>Anton Metlitsky</h1>
                         <p>Creative Frontend developer living in Minsk and happy to make your pages looks awesome.</p>
                         <div className={s.iconsWrapper}>
-                            <a href="https://github.com/ticket1201">
+                            <a href="https://github.com/ticket1201" target={'_blank'}>
                                 <FontAwesomeIcon icon={faGithub}/>
                             </a>
                             <a href="https://www.linkedin.com/in/anton-metlitsky-3568a113a" target={'_blank'}
