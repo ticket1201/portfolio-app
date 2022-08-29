@@ -1,10 +1,19 @@
+@import "./../../assets/styles/mixins";
+@import "./../../assets/styles/variables";
+
 .skills {
-  background: rgba(248, 249, 250, 1);
-  display: flex;
-  justify-content: center;
+  @include displayFlex(row, center);
+  background: $inputWhite;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.fade{
+  overflow: hidden;
 }
 
 .wrapper {
+  width: 80%;
   flex-direction: column;
   align-items: center;
   gap: 15px;
@@ -17,11 +26,11 @@
   justify-content: space-between;
   flex-wrap: wrap;
   @media screen {
-    @media (max-width: 1080px) {
-      gap: 35px;
+    @media (max-width: $maxWidthBreak1080) {
       justify-content: center;
+      gap: 35px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: $maxWidthBreak768) {
       flex-direction: column;
       align-items: center;
     }
@@ -30,18 +39,17 @@
 
 .skillCard {
   width: 335px;
+  height: 1000px;
   box-sizing: border-box;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include displayFlex(column, center);
   align-items: center;
   gap: 10px;
+  background: white;
   padding: 45px 25px 55px;
   border-radius: 15px;
   box-shadow: 6px 6px 8px -5px rgba(34, 60, 80, 0.6);
   @media screen {
-    @media (max-width: 480px) {
+    @media (max-width: $maxWidthBreak480) {
      width: 310px;
     }
   }
@@ -61,7 +69,8 @@
 
   & .CardDescription {
     font-size: 1.25rem;
-    color: #6c757d;
+    color: $lightBlack;
 
   }
 }
+

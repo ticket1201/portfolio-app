@@ -7,7 +7,7 @@ type SkillCardPropsType = {
     iconName: IconProp
     iconColor: string
     skillTitle: string
-    skillDescription: string
+
 }
 
 
@@ -16,7 +16,6 @@ const SkillCard = (props:SkillCardPropsType) => {
         <div className={s.skillCard}>
             <FontAwesomeIcon icon={props.iconName} color={props.iconColor}/>
             <h3 className={s.CardTitle}>{props.skillTitle}</h3>
-            <p className={s.CardDescription}>{props.skillDescription}</p>
         </div>
     );
 };
