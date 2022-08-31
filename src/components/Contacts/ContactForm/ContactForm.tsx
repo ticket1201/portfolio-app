@@ -1,0 +1,86 @@
+import React, {useRef, useState} from 'react';
+import {ErrorMessage, Field, Form, Formik} from 'formik';
+import s from './../Contacts.module.scss'
+import emailjs from '@emailjs/browser';
+import {Fade} from 'react-awesome-reveal';
+
+type MyFormValues = {
+    name: string
+    email: string
+    message: string
+}
+
+const ContactForm = () => {
+    let [isSending, setIsSending] = useState(false)
+    let [status, setStatus] = useState('')
+    const sendStyle = isSending ? s.formFade : s.hide;
+    const initialValues: MyFormValues = {name: '', email: '', message: ''};
+    const form = useRef();
+    const sendEmail = () => {
+        setIsSending(true)
+        setStatus('Sending')
+        emailjs.sendForm('service_7m929wc', 'template_vubtb87', form.current!, '32SWopQrOULWq2gAI')
+            .then((result) => {
+                console.log(result.text);
+                setStatus('Your message has been sent. Thank you.')
+                setTimeout(() => {
+                    setIsSending(false)
+
+                }, 2000)
+
+            }, (error) => {
+                console.log(error.text);
+                setStatus('Oops, something went wrong...')
+                setTimeout(() => {setIsSending(false)}, 2000)
+            });
+    };
+
+
+    return (
+        <>
+            <Formik
+                initialValues={initialValues}
+                validate={values => {
+                    const errors = {} as MyFormValues;
+                    if (!values.name) {
+                        errors.name! = 'Type your name';
+                    }
+                    if (!values.message) {
+                        errors.message = 'Enter your message';
+                    } else if (values.message.length < 10) {
+                        errors.message = 'Type more that 10 symbols';
+                    }
+                    if (!values.email) {
+                        errors.email = 'Type your email';
+                    } else if (
+                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                    ) {
+                        errors.email = 'Invalid email address';
+                    }
+                    return errors;
+                }}
+                onSubmit={sendEmail}
+            >
+                {({isSubmitting}) => <Form className={s.form}
+                    // @ts-ignore
+                                           ref={form}
+                                           name={'Portfolio Contact Form'}>
+                    <Field name="name" placeholder="Name" className={s.input}/>
+                    <ErrorMessage name="name" component="p"/>
+                    <Field name="email" placeholder="Email" className={s.input}/>
+                    <ErrorMessage name="email" component="p"/>
+                    <Field name="message" placeholder="Message text" as="textarea"
+                           className={s.textarea}/>
+                    <ErrorMessage name="text" component="p"/>
+                    <button type="submit" disabled={isSubmitting}>Send message</button>
+                </Form>}
+            </Formik>
+            <Fade className={sendStyle}>
+                <p>{status}</p>
+            </Fade>
+        </>
+
+    );
+};
+
+export default ContactForm;
