@@ -9,6 +9,7 @@ import Popup from 'reactjs-popup';
 const About = () => {
     let date = new Date()
 
+
     const overlayStyle = {
         backgroundColor: `rgba(0, 0, 0, 0.6)`
     }
@@ -17,15 +18,16 @@ const About = () => {
         <section className={s.About}>
             <Slide direction={'right'}>
                 <div className={`wrapper ${s.wrapper}`}>
-                    <img src={img} alt="me"/>
+                    <div className={s.img}>
+                        <img src={img} alt="me"/>
+                    </div>
                     <h3>
-                        Anton Metlitsky & Frontend developer
+                        Anton Metlitsky. Frontend developer
                     </h3>
                     <div className={s.textWrapper}>
                         <div className={s.descriptionText}>
                             <p>
-                                Hello, I am a creative Frontend developer living in Minsk and happy to make your pages
-                                looks awesome.
+                                Hello, I am a creative Frontend developer, more information below. Just click the button to check my skills and tech stack.
                             </p>
                             <Popup trigger={<button>Read more</button>} modal position={'center center'}
                                    overlayStyle={overlayStyle} className={'popup'}>

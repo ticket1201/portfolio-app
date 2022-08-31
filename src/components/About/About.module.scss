@@ -1,6 +1,7 @@
 @import './../../assets/styles/variables';
 @import "./../../assets/styles/mixins";
 
+
 .About {
   min-height: 100vh;
   flex: 1 1 100%;
@@ -11,15 +12,24 @@
   flex-direction: column;
   overflow: hidden;
 
-  .popup{
+
+  .popup {
     overflow-x: scroll;
   }
+
+
   .wrapper {
     @include displayFlex(column, center);
-    padding: 40px 40px;
+    padding: 20px 40px;
 
-    & img {
-      width: 100%;
+    & .img {
+      object-fit: contain;
+
+      & img {
+
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
 
     & h3 {
@@ -27,7 +37,7 @@
       font-weight: 700;
       letter-spacing: 0.5px;
       align-self: flex-start;
-      margin: 48px 0 23px 0;
+      margin: 30px 0 8px 0;
     }
 
     & .textWrapper {
@@ -38,6 +48,7 @@
         width: 45%;
         line-height: 30px;
         font-style: italic;
+
 
         & p {
           margin-bottom: 35px;
@@ -78,11 +89,11 @@
           align-items: center;
 
 
-
           & .descriptionText {
             width: 85%;
-            & p{
-              margin:0 0 15px;
+
+            & p {
+              margin: 0 0 15px;
             }
           }
 
