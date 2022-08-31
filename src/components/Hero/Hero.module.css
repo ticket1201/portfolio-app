@@ -94,6 +94,7 @@ button:hover {
   flex-direction: row;
   justify-content: flex-start;
   gap: 15px;
+  height: 25px;
 }
 .wrapper .textWrapper .iconsWrapper a {
   color: #18191a;
@@ -104,6 +105,11 @@ button:hover {
 .wrapper .textWrapper .iconsWrapper a svg {
   height: 17px;
   width: 17px;
+  transition: width 0.1s linear;
+}
+.wrapper .textWrapper .iconsWrapper a svg:hover {
+  height: 20px;
+  width: 20px;
 }
 .wrapper .imageWrapper {
   min-width: 300px;
