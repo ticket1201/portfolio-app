@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.scss';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
@@ -9,11 +9,12 @@ import About from './components/About/About';
 import Burger from './components/Burger/Burger';
 
 function App() {
+    const [isClosed, setIsClosed] = useState(true)
 
     return (
         <main className="App">
-            <Header/>
-            <Burger/>
+            <Header isClosed={isClosed} callback={setIsClosed}/>
+            <Burger callback={setIsClosed}/>
             <Routes>
                 <Route path="/*" element={<Hero/>}/>
                 <Route path="contact" element={<Contacts/>}/>
