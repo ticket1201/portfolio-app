@@ -4,6 +4,7 @@
 .App{
   @include displayFlex(row, flex-start);
   flex: 1 1 100%;
+  position: relative;
 }
 
 .hidden {
