@@ -15,7 +15,7 @@ const Hero = () => {
                     </div>
                     <div className={s.textWrapper}>
                         <h1>Anton Metlitsky</h1>
-                        <p>Creative Frontend developer living in Minsk and happy to make your pages looks awesome.</p>
+                        <p>Creative Frontend developer living in Minsk and happy to make your pages look awesome.</p>
                         <div className={s.iconsWrapper}>
                             <a href="https://github.com/ticket1201" target={'_blank'}>
                                 <FontAwesomeIcon icon={faGithub}/>
