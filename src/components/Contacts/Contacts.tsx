@@ -1,8 +1,10 @@
 import React from 'react';
 import s from './Contacts.module.scss'
 import {Slide} from 'react-awesome-reveal';
+import ContactForm from './ContactForm/ContactForm';
 
 const Contacts = () => {
+
     return (
         <section className={s.contacts}>
             <Slide className={s.slide} direction={'right'}>
@@ -14,15 +16,10 @@ const Contacts = () => {
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <form action="" className={s.form}>
-                        <input type="text" placeholder={`Name`} autoComplete={`on`} name="name"/>
-                        <input type="email" placeholder={`Email address`} autoComplete={`on`}/>
-                        <textarea name="" id="" placeholder={'Message'}>
-                    </textarea>
-                    </form>
-                    <button className={`button`}>Send Message</button>
+                    <ContactForm/>
                 </div>
             </Slide>
+
         </section>
 
 

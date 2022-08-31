@@ -69,6 +69,8 @@ button:hover {
   flex-direction: row;
   justify-content: center;
   flex: 1 1 100%;
+  height: 100%;
+  align-items: center;
 }
 .contacts h2 {
   align-self: flex-start;
@@ -109,27 +111,35 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  gap: 20px;
   font-size: 1.25rem;
   margin-bottom: 30px;
 }
-.form input {
+.form p {
+  margin: 8px 8px 0;
+}
+.form button {
+  margin-top: 18px;
+}
+.form .input {
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 5px 15px;
   font-style: italic;
   background: #ffffff;
 }
-.form input::placeholder {
+.form .input:nth-child(n+1) {
+  margin-top: 10px;
+}
+.form .input::placeholder {
   font-style: italic;
   font-weight: bold;
   color: #7c7c7c;
 }
-.form input:focus {
+.form .input:focus {
   outline: none;
   border-color: #18191a;
 }
-.form textarea {
+.form .textarea {
   min-height: 100px;
   resize: none;
   font-style: italic;
@@ -138,14 +148,40 @@ button:hover {
   color: #7c7c7c;
   padding: 15px;
   background: #ffffff;
+  margin: 8px 0 0;
 }
-.form textarea::placeholder {
+.form .textarea::placeholder {
   font-weight: bold;
   color: #7c7c7c;
 }
-.form textarea:focus {
+.form .textarea:focus {
   outline: none;
   border-color: #18191a;
+}
+
+.formFade {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 20px;
+  z-index: 10;
+}
+.formFade p {
+  word-break: normal;
+  text-align: center;
+}
+
+.hide {
+  display: none;
 }
 
 /*# sourceMappingURL=Contacts.module.css.map */
