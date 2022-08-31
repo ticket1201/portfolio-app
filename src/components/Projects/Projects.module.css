@@ -118,33 +118,52 @@ button:hover {
 .projectCard button {
   display: none;
 }
-.projectCard:hover {
-  animation: shadow-drop-br 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-.projectCard:hover .imageWrapper {
-  filter: grayscale(0);
-}
-@media screen and (max-width: 480px) {
+@media (hover: hover) {
+  .projectCard:hover {
+    animation: shadow-drop-br 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
   .projectCard:hover .imageWrapper {
-    height: 200px;
+    filter: grayscale(0);
+  }
+  .projectCard:hover .imageWrapper:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+  }
+  .projectCard:hover .hiddenBtn {
+    position: relative;
+    display: block;
+    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    z-index: 10;
   }
 }
-.projectCard:hover .imageWrapper:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 10px 10px 0 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 5;
-}
-.projectCard:hover .hiddenBtn {
-  position: relative;
-  display: block;
-  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  z-index: 10;
+@media (hover: none) {
+  .projectCard div.imageWrapper {
+    filter: grayscale(0);
+  }
+  .projectCard div.imageWrapper:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+  }
+  .projectCard div.imageWrapper .hiddenBtn {
+    position: relative;
+    display: block;
+    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    z-index: 10;
+  }
 }
 .projectCard .imageWrapper {
   height: 300px;
@@ -157,6 +176,11 @@ button:hover {
   background-position: center;
   background-size: cover;
   filter: grayscale(100%);
+}
+@media screen and (max-width: 480px) {
+  .projectCard .imageWrapper {
+    height: 200px;
+  }
 }
 .projectCard .descriptionWrapper {
   display: flex;
