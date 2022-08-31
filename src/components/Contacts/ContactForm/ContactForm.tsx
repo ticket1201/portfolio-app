@@ -71,7 +71,7 @@ const ContactForm = () => {
                     <ErrorMessage name="email" component="p"/>
                     <Field name="message" placeholder="Message text" as="textarea"
                            className={s.textarea}/>
-                    <ErrorMessage name="text" component="p"/>
+                    <ErrorMessage name="message" component="p"/>
                     <button type="submit" disabled={isSubmitting}>Send message</button>
                 </Form>}
             </Formik>
