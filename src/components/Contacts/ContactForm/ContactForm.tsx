@@ -1,8 +1,8 @@
 import React, {useRef, useState} from 'react';
 import {ErrorMessage, Field, Form, Formik} from 'formik';
 import s from './../Contacts.module.scss'
-import emailjs from '@emailjs/browser';
 import {Fade} from 'react-awesome-reveal';
+import {api} from '../../../api/api';
 
 type MyFormValues = {
     name: string
@@ -17,22 +17,7 @@ const ContactForm = () => {
     const initialValues: MyFormValues = {name: '', email: '', message: ''};
     const form = useRef();
     const sendEmail = () => {
-        setIsSending(true)
-        setStatus('Sending')
-        emailjs.sendForm('service_7m929wc', 'template_vubtb87', form.current!, '32SWopQrOULWq2gAI')
-            .then((result) => {
-                console.log(result.text);
-                setStatus('Your message has been sent. Thank you.')
-                setTimeout(() => {
-                    setIsSending(false)
-
-                }, 2000)
-
-            }, (error) => {
-                console.log(error.text);
-                setStatus('Oops, something went wrong...')
-                setTimeout(() => {setIsSending(false)}, 2000)
-            });
+        api.sendEmail(setStatus, setIsSending, form)
     };
 
 
