@@ -136,7 +136,7 @@
 
   & .descriptionWrapper {
     @include displayFlex(column, center);
-    align-items: start;
+    align-items: flex-start;
     padding: 0 30px 25px;
     border-radius: 0 0 10px 10px;
     background: $inputWhite;
