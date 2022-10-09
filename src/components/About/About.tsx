@@ -43,7 +43,7 @@ const About = () => {
                             </p>
                             <p className={s.aboutText}>
                                 <span className={s.aboutTextTitle}>Address:</span>
-                                <span>Minsk, Belarus</span>
+                                <span>Tbilisi, Georgia</span>
                             </p>
                             <p className={s.aboutText}>
                                 <span className={s.aboutTextTitle}>Email:</span>
@@ -51,7 +51,7 @@ const About = () => {
                             </p>
                             <p className={s.aboutText}>
                                 <span className={s.aboutTextTitle}>Phone:</span>
-                                <span>+375291099310</span>
+                                <span>+995 (591) 51 07 74</span>
                             </p>
                             <p className={s.aboutText}>
                                 <span className={s.aboutTextTitle}>Freelance:</span>
