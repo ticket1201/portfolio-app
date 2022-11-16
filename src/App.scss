@@ -1,5 +1,7 @@
 @import "./assets/styles/mixins";
 @import "./assets/styles/variables";
+@import "./../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "./../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 .App{
   @include displayFlex(row, flex-start);
