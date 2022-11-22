@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.45fd59f0.css",
-    "main.js": "/static/js/main.15d7c6d5.js",
+    "main.css": "/static/css/main.4bd3ef4e.css",
+    "main.js": "/static/js/main.40fe71f0.js",
     "static/js/787.30237536.chunk.js": "/static/js/787.30237536.chunk.js",
     "static/media/socialNetwork.png": "/static/media/socialNetwork.36aca77a989cfa223291.png",
     "static/media/IMG_2597.jpg": "/static/media/IMG_2597.e4d3d0640ce3cfb8fd44.jpg",
     "static/media/todolist.png": "/static/media/todolist.27da4ffb989eaeaec9d4.png",
+    "static/media/pizza.jpg": "/static/media/pizza.c91b8ee4c7d51a4d168b.jpg",
+    "static/media/sentosa.jpg": "/static/media/sentosa.9e29821ca60b6a291779.jpg",
     "static/media/mesqr1024.webp": "/static/media/mesqr1024.9d15f0696d0b986c6e92.webp",
     "static/media/cards.jpg": "/static/media/cards.3337431abbfe7c404b74.jpg",
     "index.html": "/index.html",
-    "main.45fd59f0.css.map": "/static/css/main.45fd59f0.css.map",
-    "main.15d7c6d5.js.map": "/static/js/main.15d7c6d5.js.map",
+    "main.4bd3ef4e.css.map": "/static/css/main.4bd3ef4e.css.map",
+    "main.40fe71f0.js.map": "/static/js/main.40fe71f0.js.map",
     "787.30237536.chunk.js.map": "/static/js/787.30237536.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45fd59f0.css",
-    "static/js/main.15d7c6d5.js"
+    "static/css/main.4bd3ef4e.css",
+    "static/js/main.40fe71f0.js"
   ]
 }
