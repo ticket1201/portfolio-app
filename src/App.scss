@@ -3,31 +3,40 @@
 @import "./../node_modules/@glidejs/glide/src/assets/sass/glide.core";
 @import "./../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
-.App{
-  @include displayFlex(row, flex-start);
-  flex: 1 1 100%;
+.App {
+  display: grid;
+  grid-template-columns: 360px 1fr;
   position: relative;
+
+  @media screen {
+    @media (max-width: 1200px) {
+      grid-template-columns: 100vw;
+    }
+  }
 }
 
 .hidden {
   display: none;
 }
 
-.popup{
+.popup {
   overflow: scroll;
 
-  &-overlay{
+  &-overlay {
     height: 100vh;
   }
-  &-content{
+
+  &-content {
     border-radius: 5px;
     height: 80vh;
     overflow-y: scroll;
-    &::-webkit-scrollbar{
+
+    &::-webkit-scrollbar {
       width: 20px;
       background: $inputWhite;
       border-radius: 0 5px 5px 0;
     }
+
     /* Handle */
     &::-webkit-scrollbar-thumb {
       border: 3px $inputWhite solid;
